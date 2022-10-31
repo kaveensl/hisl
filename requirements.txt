@@ -86,7 +86,6 @@ Werkzeug==2.0.2
 whichcraft==0.6.1
 whitenoise==6.2.0
 win-inet-pton==1.1.0
-WMI==1.5.1
 wsproto==1.1.0
 yarl==1.8.1
 zope.event==4.5.0
