@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - Stage 2</title>
+    <style>
+        body{
+            height: 90vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: black;
+            color: rgb(84, 223, 84);
+        }
+        h1{
+            padding: 20px 35px;
+            background-color: rgb(70, 68, 68);
+            font-size: 19px;
+            font-family: sans-serif;
+            color: #fff;
+        }
+        form{
+            background-color: rgb(30, 30, 30);
+            height: 70%;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        form input{
+            width: 60%;
+            height: 40px;
+            margin: 15px;
+            background-color: rgb(30, 30, 30);
+            border-bottom: 3px;
+            border-color: rgb(107, 239, 107);
+            border-style: solid;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            font-size: 18px;
+            color: white;
+        }
+        form input:focus{
+            outline: none;
+        }
+        .select{
+            width: 50%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0px 20px;
+        }
+        label{
+            font-size: 20px;
+            font-family: cursive;
+        }
+        select{
+            width: 70%;
+            height: 40px;
+            background-color: rgb(30, 30, 30);
+            border-bottom: 3px;
+            border-color: rgb(107, 239, 107);
+            border-style: solid;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            font-size: 18px;
+            color: white;
+        }
+        button{
+            height: 50px;
+            width: 60%;
+            border-color: transparent;
+            background-color: rgb(151, 231, 151);
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        img{
+            width: 150px;
+            margin-top: -20px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Now check weather your command is executed</h1>
+    <form method="post" id="form">
+        {% csrf_token %}
+        <img src="https://i.pinimg.com/originals/3b/6c/51/3b6c5128687cc0ff115c8754cadd5548.jpg" >
+        <input type="text" name="name" placeholder="username">
+        <input type="text" name="folder" placeholder="Folder you have created">
+        <div class="select">
+            <label for="select">Stage</label>
+            <select name="Level" id="select" form="form">
+                <option value="Addmission">Addmission</option>
+                <option value="Reporters">Reporters</option>
+                <option value="Main member">Main member</option>
+            </select>
+        </div>
+        <input type="tel" name="tel" placeholder="WA number">
+        <button type="submit">Check</button>
+    </form>
+</body>
+</html>

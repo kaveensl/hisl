@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellcome</title>
+  <style>
+    body{
+      background-image:linear-gradient(rgba(0, 0, 0, 0.567),rgba(0, 0, 0, 0.487)) ,url(https://image.winudf.com/v2/image1/Y29tLmFwcDNkd2FsbHBhcGVyaGQuaG90ZWx3YWxscGFwZXJfc2NyZWVuXzEwXzE1NjcwMjU1NDBfMDA2/screen-10.jpg?fakeurl=1&type=.jpg);
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .content{
+      margin-bottom: 20px;
+      color: white;
+      font-size: 40px;
+    }
+    .btn{
+      padding: 25px 55px;
+      background-color: transparent;
+      border-width: 5px;
+      background-color: white;
+      border-style: solid;
+      color: black;
+      text-decoration: none;
+      border-color: transparent;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Wellcome To Hotel</h1>
+    <a href="{% url 'facebook' %}" class="btn">Login to continue</a>
+    <form method="post">
+      {% csrf_token %}
+    </form>
+  </div>
+</body>
+</html>
